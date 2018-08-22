@@ -1,0 +1,10 @@
+---
+applications:
+    - name: roster-foden
+      memory: 750M
+      instances: 2
+      path: roster.jar
+      buildpacks:
+          - java_buildpack
+      services:
+          - roster-db

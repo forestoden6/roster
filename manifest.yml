@@ -9,4 +9,4 @@ applications:
       services:
           - roster-db
           - config-server
-          - service-discovery
+          - service-registry

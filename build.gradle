@@ -26,8 +26,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-cloud-connectors')
 	compile('org.springframework.cloud:spring-cloud-starter')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	  compile('io.pivotal.spring.cloud:spring-cloud-services-starter-config-client')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('io.pivotal.spring.cloud:spring-cloud-services-starter-config-client')
 	compile('org.webjars:bootstrap:4.0.0')
 	compile('org.webjars:font-awesome:5.0.6')
 	compile('org.webjars:webjars-locator-core')
@@ -45,6 +45,12 @@ ext {
 
 dependencyManagement {
         imports {
-        	mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:2.0.1.RELEASE"
+                mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
         }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:2.0.1.RELEASE"
+    }
 }

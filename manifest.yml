@@ -8,3 +8,4 @@ applications:
           - java_buildpack
       services:
           - roster-db
+          - config-server
